@@ -18,10 +18,10 @@
             <div class="number" style="--i:2;--clr:#70db90;">
                 <span>Vue</span>
             </div>
-            <div class="number" style="--i:3;--clr:#fff;">
+            <div class="number" style="--i:3;--clr:#c4c000;">
                 <span>Preact</span>
             </div>
-            <div class="number" style="--i:4;--clr:#181314;">
+            <div class="number" style="--i:4;--clr:#117e81;">
                 <span>Angular</span>
             </div>
             <div class="number" style="--i:5;--clr:#7080db;">
@@ -30,10 +30,23 @@
             <div class="number" style="--i:6;--clr:#ff0000;">
                 <span>Next.js</span>
             </div>
-            <div class="number" style="--i:6;--clr:#c4db70;">
+            <div class="number" style="--i:7;--clr:#c4db70;">
                 <span>Svelte</span>
+            </div>
+            <div class="number" style="--i:8;--clr:#79e493;">
+                <span>?</span>
             </div>
         </div>
     </div>
+    <script>
+        let wheel = document.querySelector('.wheel');
+        let spinBtn = document.querySelector('.spinBtn');
+        let value = Math.ceil(Math.random() * 3600)
+
+        spinBtn.onclick = function() {
+            wheel.style.transform = "rotate(" + value + "deg)";
+            value += Math.ceil(Math.random() * 3600);
+        }
+    </script>
 </body>
 </html>
